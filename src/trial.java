@@ -1,16 +1,25 @@
-public class trial {
+import java.util.Scanner;
+public class Trial{
 
-    public static void main(String[] args) {
-        String name = (" Name : Karishma Ajitsaria");
-        String address = (" Address : 9, Mavendish Drive, Edgware, HA9 0NR");
-        int age =  39;
-      String phone_no =  ( "07810501089");
-        int salary = 80000;
-        System.out.println(name);
-        System.out.println(address);
-        System.out.println(age);
-        System.out.println(phone_no);
-        System.out.println(salary);
-        }
-        }
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("input first number:");
+         int a = scanner.nextInt();
+        System.out.println("input the second number :");
+        int b = scanner.nextInt();
 
+         int multiply = a*b;
+
+     ;
+
+
+        System.out.printf("Multiplication =%d\n ",multiply);
+
+
+
+
+
+
+    }
+}
