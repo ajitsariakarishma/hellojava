@@ -1,15 +1,17 @@
 public class Main {
+   static String name = (" Name : Karishma Ajitsaria");
+    static String address = (" Address : 9, Mavendish Drive,\n Edgware,\n HA9 0NR");
+    static int age = 39;
+    static String phone_no = ( " 07810501087" );
+    static double salary = 80000.7989;
+    static char a = '$';
     public static void main(String[] args) {
-        String name = (" Name : Karishma Ajitsaria");
-        String address = (" Address : 9, Mavendish Drive, Edgware, HA9 0NR");
-        String age = ("Age : 39");
-        String phone_no = ("Phone no : 07810501089" );
-        String salary = ("Salary : $80,000");
+
         System.out.println(name);
         System.out.println(address);
-        System.out.println(age);
-        System.out.println(phone_no);
-        System.out.println(salary);
+        System.out.println(" Age:" +age);
+        System.out.println(" Mobile no :"+phone_no);
+        System.out.println(" Salary : " +a+salary);
 
     }
 }
