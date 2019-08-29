@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class ArrayListIteration {
 
@@ -15,40 +16,43 @@ public class ArrayListIteration {
 
         //using for each loop and lambda expression
         System.out.println("\n*********print with for each loop and lambda*****************");
-        tvSeries.forEach(shows->{
-            System.out.print("  "+shows+"  ");
+        tvSeries.forEach(shows -> {
+            System.out.print("  " + shows + "  ");
         });
         System.out.println("\n*********print with iterator*****************");
 
         //using iterator method
         Iterator<String> show = tvSeries.iterator();
-        while(show.hasNext()){
-            String show1= show.next();
-            System.out.print(" "+ show1+"  ");
+        while (show.hasNext()) {
+            String show1 = show.next();
+            System.out.print(" " + show1 + "  ");
         }
         //using iterator and forEachRemaining() Method
         System.out.println("\n***********using iterator,lambda and forEachRemaining() Method************************");
-          show = tvSeries.iterator();
-          show.forEachRemaining(show2->{
-              System.out.print("  "+show2+"  ");
-          });
+        show = tvSeries.iterator();
+        show.forEachRemaining(show2 -> {
+            System.out.print("  " + show2 + "  ");
+        });
 
-          //using normal for each loop
+        //using normal for each loop
         System.out.println("\n*********print using normal for each loop *****************");
-        for(String shows:tvSeries){
-            System.out.print(" "+shows+"  ");
+        for (String shows : tvSeries) {
+            System.out.print(" " + shows + "  ");
         }
-       // using for loop most standard way
+        // using for loop most standard way
         System.out.println("\n*********print using normal for  loop *****************");
-        for(int i = 0; i<tvSeries.size();i++){
-            System.out.print("  "+tvSeries.get(i)+"  ");
-
+        for (int i = 0; i < tvSeries.size(); i++) {
+            System.out.print("  " + tvSeries.get(i) + "  ");
         }
 
+        //using listiterator() which will list in reverse order
+        System.out.println("\n*********print listIterator() which prints bottom to top****************");
+        ListIterator<String> anyname = tvSeries.listIterator(tvSeries.size());
 
-
-
-
+        while (anyname.hasPrevious()) {
+           String show3 = anyname.previous();
+            System.out.print("  "+show3+"  ");
+        }
 
     }
 
